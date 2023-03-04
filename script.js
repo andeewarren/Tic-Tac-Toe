@@ -26,7 +26,7 @@ let cells = document.getElementsByClassName('box')
 
 let startButton = document.getElementById('start')
 
-status.innerHTML = `Player 1's turn`;
+status.innerHTML = `Press start to begin`;
 player1Score.innerHTML = 0;
 player2Score.innerHTML = 0;
 
@@ -47,8 +47,9 @@ document.getElementById('reset').addEventListener('click', () => {
     for (cell of cells){
         cell.innerHTML = "";
     };
+    status.innerHTML = `Game board successfully reset`
     // console.log(gameActive)
-    console.log(gameState)
+    // console.log(gameState)
 })
 
 //declare win conditions
@@ -160,19 +161,26 @@ function checkWin () {
 
 //iterate over each cell to make board playable
 for (let i = 0; i < cells.length; i++) {
-    cells[i].addEventListener('click', () => {
+
+    cells[i].addEventListener('click', (e) => {
+        const classList = e.target.classList;
+        const location = classList[1];
         if (gameActive === true && cells[i].innerHTML == ""){
             if (turns%2 === 0){ //what happens when it's player 1's turn
-                cells[i].innerHTML = player1;
+                // cells[i].innerHTML = player1;
+                classList.add('x')
                 gameState[i] = player1;
-                // console.log(gameState);
+                
+                console.log(gameState);
                 turns++;
                 status.innerHTML = `Player 2's turn`; //update status before start of player 2's turn
                 checkWin();
             } else { //what happens when it's not player 1's turn
-                cells[i].innerHTML = player2;
+                // cells[i].innerHTML = player2;
+                classList.add('o')
                 gameState[i] = player2;
-                // console.log(gameState);
+
+                console.log(gameState);
                 turns++;
                 status.innerHTML = `Player 1's turn`; //update turn status before start of player 1's turn
                 checkWin();
