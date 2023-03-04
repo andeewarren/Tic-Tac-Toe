@@ -47,20 +47,19 @@ h3 {
     position: relative;
     cursor: pointer;
     font-size: xx-large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:cursive ;
 }
 
+
 .box.x::before,
-/* creates the first line of the x */
-.box.x::after {
-  /* creates the second line of the x */
+.box.x::after { 
   content: "";
   position: absolute;
   width: calc(var(--mark-size) * 0.15);
-  /* width is 15 percent of the cell */
+  
   height: var(--mark-size);
   background-color: #DBC0FF;
-}
+} 
 
 .box.x::before {
   transform: rotate(45deg);
@@ -72,12 +71,12 @@ h3 {
 
 .box.o::before,
 .box.o::after {
-  content: ""; /*renders the before and after elements*/
+  content: ""; 
   position: absolute;
   border-radius: 50%;
 }
 
-/* larger circle */
+
 .box.o::before {
   width: var(--mark-size);
   height: var(--mark-size);
@@ -88,7 +87,7 @@ h3 {
   width: calc(var(--mark-size) * 0.7);
   height: calc(var(--mark-size) * 0.7);
   background-color: white;
-}
+} 
 
 .btn-custom {
     border-radius: 10px;

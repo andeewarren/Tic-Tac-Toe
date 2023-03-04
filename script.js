@@ -44,9 +44,10 @@ document.getElementById('reset').addEventListener('click', () => {
     gameActive = false;
     turns = 0;
     gameState = ["", "", "", "", "", "", "", "", ""];
-    for (cell of cells){
-        cell.innerHTML = "";
-    };
+    // for (cell of cells){
+    //     cell.innerHTML = "";
+    // };
+    location.reload();
     status.innerHTML = `Game board successfully reset`
     // console.log(gameActive)
     // console.log(gameState)
@@ -168,6 +169,7 @@ for (let i = 0; i < cells.length; i++) {
         if (gameActive === true && cells[i].innerHTML == ""){
             if (turns%2 === 0){ //what happens when it's player 1's turn
                 // cells[i].innerHTML = player1;
+
                 classList.add('x')
                 gameState[i] = player1;
                 
