@@ -27,12 +27,12 @@ let cells = document.getElementsByClassName('box')
 let startButton = document.getElementById('start')
 
 status.innerHTML = `Press start to begin`;
-player1Score.innerHTML = 0;
-player2Score.innerHTML = 0;
+// player1Score.innerHTML = 0;
+// player2Score.innerHTML = 0;
 
 //make start button clickable
 startButton.addEventListener('click', () => {
-    console.log(gameActive)
+    // console.log(gameActive)
     gameActive = true;
     status.innerHTML = `Player 1's turn`
     console.log(gameActive)
@@ -48,7 +48,7 @@ document.getElementById('reset').addEventListener('click', () => {
     //     cell.innerHTML = "";
     // };
     location.reload();
-    status.innerHTML = `Game board successfully reset`
+    // status.innerHTML = `Game board successfully reset`
     // console.log(gameActive)
     // console.log(gameState)
 })
@@ -60,12 +60,12 @@ function checkWin () {
             if (gameState[0] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[0] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
             
@@ -73,84 +73,84 @@ function checkWin () {
             if (gameState[3] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[3] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
         } else if (gameState[6] && gameState[7] === gameState[6] && gameState[8] === gameState[6]) { //bottom row winner
             if (gameState[6] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[6] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
         } else if (gameState[0] && gameState[3] === gameState[0] && gameState[6] === gameState[0]) { //left column winner
             if (gameState[0] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[0] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
         } else if (gameState[1] && gameState[4] === gameState[1] && gameState[7] === gameState[1]) { //middle column winner
             if (gameState[1] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[1] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
         } else if (gameState[2] && gameState[5] === gameState[2] && gameState[8] === gameState[2]) { //right column winner
             if (gameState[2] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[2] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
         } else if (gameState[0] && gameState[4] === gameState[0] && gameState[8] === gameState[0]) { //top left to bottom right winner
             if (gameState[0] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[0] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
         } else if (gameState[2] && gameState[4] === gameState[2] && gameState[6] === gameState[2]) { //top right to bottom left winner
             if (gameState[2] === 'x') {
                 gameActive = false;
                 winner = player1;
-                player1Score.innerHTML++;
+                // player1Score.innerHTML++;
                 status.innerHTML = `Player 1 wins!`;
             } else if (gameState[2] === 'o') {
                 gameActive = false;
                 winner = player2;
-                player2Score.innerHTML++;
+                // player2Score.innerHTML++;
                 status.innerHTML = `Player 2 wins!`
             } 
         } else if (gameState[0] && gameState[1] && gameState[2] && gameState[3] && gameState[4] && gameState[5] && gameState[6] && gameState[7] && gameState[8]) { //tie game
