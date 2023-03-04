@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    width: 90vw;
+}
+
+:root {
+    --cell-size: 150px;
+}
+
+.grid {
+    /* margin-top: -100px; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(3,auto); /*sets what was 9 columns into 3x3*/
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.box {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    /* border: 3px solid #444; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
