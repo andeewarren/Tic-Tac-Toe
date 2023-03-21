@@ -11,7 +11,7 @@ let player2Score = document.getElementById('player2-score');
 let winner = null;
 let status = document.getElementById('game-status');
 
-
+//used variable cells instead of these
 // let box1 = document.getElementById('box1');
 // let box2 = document.getElementById('box2');
 // let box3 = document.getElementById('box3');
